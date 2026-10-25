@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heli Shah · Portfolio</title>
+  <meta name="description" content="Heli Shah: Computer Science at Nirma University. Systems and low-latency engineering, quantitative research, and AI for space and science." />
+  <meta property="og:title" content="Heli Shah · Portfolio" />
+  <meta property="og:description" content="Systems, quant research and AI for space. Inspired by Dr. A. P. J. Abdul Kalam and Srinivasa Ramanujan." />
+  <meta name="theme-color" content="#060a18" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23060a18'/%3E%3Cpath d='M12 32c0-7 5-11 10-11 9 0 11 22 20 22 5 0 10-4 10-11s-5-11-10-11c-9 0-11 22-20 22-5 0-10-4-10-11z' fill='none' stroke='%23e7c27d' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Kalam:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Heli Shah, home">
+      <svg viewBox="0 0 64 32" width="34" height="17" aria-hidden="true"><path d="M4 16c0-6 4-10 9-10 9 0 13 20 25 20 6 0 22-4 22-10S54 6 38 6C26 6 22 26 13 26c-5 0-9-4-9-10z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+      <span>Heli Shah</span>
+    </a>
+    <nav aria-label="Sections">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inspiration">Inspiration</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#open-source">Open source</a></li>
+        <li><a href="#honours">Honours</a></li>
+        <li><a href="#volunteering">Volunteering</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="palette-btn" aria-label="Open command palette (Ctrl+K)" title="Search (Ctrl+K)">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <kbd>Ctrl K</kbd>
+      </button>
+      <button class="icon-btn" id="theme-btn" aria-label="Toggle light and dark theme">
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 019.5 4a8 8 0 1010.5 10.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <a class="btn btn-small" id="nav-resume" target="_blank" rel="noopener">Résumé</a>
+      <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <p class="eyebrow reveal"><span class="dot"></span> Portfolio · Computer Science</p>
+        <h1 class="hero-name reveal" id="hero-name"></h1>
+        <p class="hero-roles reveal" aria-live="polite"><span class="mono">&gt;</span> <span id="role-text"></span><span class="caret" aria-hidden="true"></span></p>
+        <p class="hero-intro reveal" id="hero-intro"></p>
+        <div class="hero-cta reveal" id="hero-cta"></div>
+      </div>
+      <div class="hero-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 520 360" class="infinity">
+          <defs>
+            <linearGradient id="g-inf" x1="0" x2="1">
+              <stop offset="0" stop-color="var(--saffron)" />
+              <stop offset="1" stop-color="var(--gold)" />
+            </linearGradient>
+            <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <circle cx="260" cy="180" r="160" class="orbit" />
+          <circle cx="260" cy="180" r="118" class="orbit orbit-2" />
+          <path id="inf-path" class="inf-path" d="" />
+          <g class="rocket" id="rocket"><circle r="6" fill="var(--gold)" filter="url(#glow)"/><circle r="2.5" fill="#fff"/></g>
+          <text x="260" y="336" class="hand" text-anchor="middle">1729 = 1³ + 12³ = 9³ + 10³</text>
+          <text x="40" y="44" class="hand small">e<tspan dy="-8" font-size="12">iπ</tspan><tspan dy="8"> + 1 = 0</tspan></text>
+          <text x="392" y="52" class="hand small">∑ p(n) qⁿ</text>
+        </svg>
+      </div>
+      <a href="#inspiration" class="scroll-cue" aria-label="Scroll to inspiration"><span></span></a>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="At a glance">
+      <ul id="stats"></ul>
+    </section>
+
+    <!-- INSPIRATION -->
+    <section class="section" id="inspiration">
+      <div class="section-head reveal">
+        <p class="kicker">01 · Inspiration</p>
+        <h2>Wings of fire, <em>a mind for infinity</em></h2>
+        <p class="lede">Two Indian scientists shaped how I think about work. One taught me to aim at the sky, the other that beauty and rigour belong together.</p>
+      </div>
+      <div class="quotes">
+        <figure class="quote kalam reveal" id="q-kalam">
+          <svg class="quote-art" viewBox="0 0 200 120" aria-hidden="true">
+            <path pathLength="400" class="draw" d="M10 110 C 60 108, 120 80, 186 12" />
+            <path pathLength="400" class="draw thin" d="M30 112 C 80 106, 130 86, 170 50" />
+            <polygon points="186,12 172,18 180,26" fill="var(--saffron)" class="pop" />
+          </svg>
+          <p class="quote-label">Aim high</p>
+          <blockquote></blockquote>
+          <figcaption></figcaption>
+        </figure>
+        <figure class="quote ramanujan reveal" id="q-ramanujan">
+          <svg class="quote-art" viewBox="0 0 200 120" aria-hidden="true">
+            <path pathLength="400" class="draw" d="M20 60c0-18 12-30 28-30 30 0 46 60 76 60 16 0 28-12 28-30s-12-30-28-30c-30 0-46 60-76 60-16 0-28-12-28-30z" />
+          </svg>
+          <p class="quote-label">Think in patterns</p>
+          <blockquote></blockquote>
+          <figcaption></figcaption>
+        </figure>
+      </div>
+      <div class="why reveal">
+        <p>
+          Dr. Kalam rose from a small coastal town to lead India's rocket and missile programmes. He reminds me that ambition matters only when it serves people. Ramanujan, with almost no formal training, filled notebooks with results mathematicians are still proving. He reminds me that curiosity and discipline compound. My own work sits between the two: space-grade reliability and mathematical precision, built into real systems.
+        </p>
+        <button class="taxicab" id="taxicab" aria-expanded="false" aria-controls="taxicab-story">
+          <span class="mono">1729</span> · why this number is in my email
+        </button>
+        <div class="taxicab-story" id="taxicab-story" hidden>
+          <p>When G. H. Hardy visited Ramanujan in hospital, he remarked that his taxi's number, 1729, seemed rather dull. Ramanujan replied that it was very interesting: it is <strong>the smallest number expressible as the sum of two cubes in two different ways</strong>.</p>
+          <p class="formula">1729 = 1³ + 12³ = 9³ + 10³</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section-head reveal">
+        <p class="kicker">02 · Internships &amp; work</p>
+        <h2>Trajectory</h2>
+        <p class="lede">Industry, research and a startup: each stage a step higher.</p>
+      </div>
+      <div class="timeline" id="timeline">
+        <div class="timeline-track" aria-hidden="true"><span id="timeline-fill"></span><i id="timeline-rocket"></i></div>
+        <ol id="experience-list"></ol>
+      </div>
+      <div class="edu reveal">
+        <h3 class="sub">Education</h3>
+        <ul id="education"></ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="section" id="research">
+      <div class="section-head reveal">
+        <p class="kicker">03 · Research</p>
+        <h2>From the notebook</h2>
+        <p class="lede">Research I've co-authored or led, written up like entries in Ramanujan's notebooks.</p>
+      </div>
+      <div class="notebook" id="research-list"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <p class="kicker">04 · Projects</p>
+        <h2>Things I've built</h2>
+        <p class="lede">Open any project to see its objective, approach, tech stack and results.</p>
+      </div>
+      <div class="filters reveal" id="filters" role="toolbar" aria-label="Filter projects"></div>
+      <div class="projects" id="project-grid"></div>
+    </section>
+
+    <!-- OPEN SOURCE -->
+    <section class="section" id="open-source">
+      <div class="section-head reveal">
+        <p class="kicker">05 · Open source</p>
+        <h2>Upstream contributions</h2>
+        <p class="lede">Pull requests to libraries other people depend on.</p>
+      </div>
+      <div class="oss" id="oss-list"></div>
+    </section>
+
+    <!-- HONOURS -->
+    <section class="section" id="honours">
+      <div class="section-head reveal">
+        <p class="kicker">06 · Honours</p>
+        <h2>Milestones</h2>
+      </div>
+      <ul class="honours" id="honours-list"></ul>
+      <div class="certs reveal">
+        <h3 class="sub">Certifications</h3>
+        <ul id="certs"></ul>
+      </div>
+    </section>
+
+    <!-- VOLUNTEERING -->
+    <section class="section" id="volunteering">
+      <div class="section-head reveal">
+        <p class="kicker">07 · Volunteering &amp; community</p>
+        <h2>Giving back</h2>
+        <p class="lede">Communities that taught me, and the ways I try to pass it on.</p>
+      </div>
+      <div class="vol" id="vol-list"></div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section-head reveal">
+        <p class="kicker">08 · Toolkit</p>
+        <h2>Tech stack</h2>
+      </div>
+      <div class="skills" id="skills-list"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="reveal">
+        <p class="kicker">09 · Contact</p>
+        <h2 class="contact-title">Let's build something that <em>won't let us sleep</em>.</h2>
+        <p class="lede">I'm applying to graduate programmes in Computer Science. I'd love to hear about research in systems, quantitative methods or AI for space.</p>
+        <div class="contact-actions" id="contact-actions"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="hand footer-formula" aria-hidden="true">3 = √(1 + 2√(1 + 3√(1 + 4√(1 + ⋯))))</p>
+    <p>© <span id="year"></span> Heli Shah · Built with curiosity, inspired by Kalam &amp; Ramanujan.</p>
+    <p class="muted small">Tip: press <kbd>Ctrl K</kbd> to jump anywhere, or type <span class="mono">1729</span>.</p>
+  </footer>
+
+  <!-- Project detail -->
+  <dialog id="project-dialog" aria-labelledby="pd-title">
+    <div class="pd">
+      <button class="icon-btn pd-close" id="pd-close" aria-label="Close project details">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div id="pd-body"></div>
+    </div>
+  </dialog>
+
+  <!-- Command palette -->
+  <dialog id="palette" aria-label="Command palette">
+    <div class="palette">
+      <input id="palette-input" type="text" placeholder="Jump to a section or project…" autocomplete="off" aria-label="Search sections and projects" />
+      <ul id="palette-list" role="listbox"></ul>
+      <p class="palette-hint"><kbd>↑</kbd><kbd>↓</kbd> navigate · <kbd>Enter</kbd> open · <kbd>Esc</kbd> close</p>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
