@@ -200,7 +200,6 @@
       <button class="card reveal" style="--d:${(i % 3) * 0.08}s" data-id="${p.id}" data-cat="${esc(p.category)}" aria-haspopup="dialog">
         <span class="cat">${esc(p.category)}</span>
         <h3>${esc(p.title)}</h3>
-        <span class="ctx">${esc(p.context)}</span>
         <p class="desc">${esc(p.short)}</p>
         <span class="chips">${p.stack.slice(0, 5).map((s) => `<span class="chip">${esc(s)}</span>`).join("")}${p.stack.length > 5 ? `<span class="chip">+${p.stack.length - 5}</span>` : ""}</span>
         <span class="more">Objective, stack &amp; results ${ICON.arrow}</span>
@@ -245,7 +244,7 @@
     $("#pd-body").innerHTML = `
       <span class="cat">${esc(p.category)}</span>
       <h3 id="pd-title">${esc(p.title)}</h3>
-      <p class="ctx">${esc(p.context)}</p>
+      ${p.context ? `<p class="ctx">${esc(p.context)}</p>` : ""}
       <div class="pd-grid">
         <section class="pd-block"><h4>Objective</h4><p>${esc(p.objective)}</p></section>
         <section class="pd-block"><h4>Approach</h4><ol>${p.approach.map((a) => `<li>${esc(a)}</li>`).join("")}</ol></section>

@@ -149,7 +149,7 @@ window.PORTFOLIO = {
       title: "QuantForge LedgerKernel",
       short: "Distributed benchmarking platform for trading engines, where a fast-but-wrong engine can never beat a correct one.",
       category: "Systems & Quant",
-      context: "IICPC Summer Hackathon 2026",
+      context: "",
       objective:
         "Fairly rank contestant-submitted order-matching engines (C++ or Go) on correctness, latency, throughput and resource use, with results that can be audited end-to-end.",
       approach: [
@@ -167,7 +167,7 @@ window.PORTFOLIO = {
       title: "HFT Risk Engine",
       short: "Low-latency pre-trade risk engine in modern C++ with lock-free atomics on the hot path.",
       category: "Systems & Quant",
-      context: "Personal project",
+      context: "",
       objective:
         "Stop bad orders before they reach the market, as real high-frequency trading desks do, without adding latency to the order path.",
       approach: [
